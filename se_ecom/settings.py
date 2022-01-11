@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'accounts',
     'category',
     'store',
+    'carts',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'category.context_processor.menu_links',
+                'carts.context_processor.counter',
 
             ],
         },
@@ -106,7 +109,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+# graph models
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
